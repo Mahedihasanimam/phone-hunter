@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>phone hunter</title>
+    <!-- tailwind and daysi ui cdn  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <bod class="max-w-7xl mx-auto">
+    <header class="my-7">
+       
+    </header>
+    
+    <main class="max-w-7xl mx-auto">
+        <div class="my-5 mx-auto w-1/2 space-y-6">
+            <h1 class="text-center text-4xl font-bold">Search your phone</h1>
+            <input id="searchField" type="search" placeholder="search your phone here" class="input input-bordered rounded-sm w-10/12 bg-[#100F0F0D]" />
+            <button onclick="handleSearch()"  class="btn rounded-sm bg-[#0D6EFD] hover:bg-[#0D6EFD] text-white">search</button>
+        </div>
+        <div id="loading-spenar" class="text-center mt-32 hidden">
+            <span class="loading loading-ring loading-lg  mx-auto "></span>
+        </div>
+        <section id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 ">
+        </section>
+       
+        <section>
+          <!-- loading  -->
+            <div id="show-btn" class="hidden my-16">
+                <button onclick="handleShowAll()"  class="btn rounded-sm bg-[#0D6EFD] hover:bg-[#0D6EFD] text-white block mx-auto">Show more</button>
+            </div>
+           <!-- show details modal  -->
+           <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div class="" id="modal-details">
+              
+            </div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn bg-[#DC3545] hover:bg-[#DC3545] text-white px-11">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+        </section>
+    </main>
+    <footer></footer>
+
+
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
